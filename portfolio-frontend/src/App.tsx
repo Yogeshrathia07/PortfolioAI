@@ -1,12 +1,6 @@
 import ChatBox from "./components/ChatBox";
+import "./styles/app.css";
 
-function App() {
-  return (
-    <div>
-      <h1>🤖 Yogesh AI Portfolio</h1>
-      <ChatBox />
-    </div>
-  );
+export default function App() {
+  return <ChatBox />;
 }
-
-export default App;
