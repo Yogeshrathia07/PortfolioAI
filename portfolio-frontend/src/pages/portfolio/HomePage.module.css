@@ -1,0 +1,123 @@
+.photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(79,126,248,0.25);
+  box-shadow: 0 12px 35px rgba(79,126,248,0.25);
+  margin-bottom: 22px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.infoRows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  color: var(--mid);
+}
+
+.infoRow svg {
+  color: #333;
+  flex-shrink: 0;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--mid);
+  text-decoration: none;
+  padding: 7px 15px;
+  border: 1px solid rgba(26,111,232,0.15);
+  border-radius: 100px;
+  background: #fff;
+  transition: all 0.18s;
+}
+
+.pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+  background-color: var(--accent);
+  color: white;
+  /* border-color: #333; */
+}
+
+.homeName {
+  font-size: clamp(40px, 5.5vw, 70px);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1.0;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.homeRole {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.homeDesc {
+  font-size: 14.5px;
+  color: var(--mid);
+  line-height: 1.75;
+  max-width: 440px;
+  margin-bottom: 28px;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: #fff;
+  transition: all 0.18s;
+}
+
+.contactLink:hover {
+  border-color: #1a6fe8;
+  color: #1a6fe8;
+}
+
+@media (max-width: 768px) {
+  .homeName { font-size: 38px; }
+}

@@ -1,0 +1,1 @@
+export type PageId = 'home' | 'education' | 'projects' | 'skills' | 'achievements' | 'contact'| 'chat';

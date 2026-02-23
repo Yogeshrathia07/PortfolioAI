@@ -1,0 +1,73 @@
+.leftInfo {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.infoLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--mid);
+}
+
+.ctList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ctItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 20px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(26,111,232,0.10);
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 1px 6px rgba(26,111,232,0.05);
+  transition: all 0.2s;
+}
+
+.ctItem:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+  box-shadow: var(--shadowh);
+  border-color: rgba(26,111,232,0.25);
+}
+
+.ctIconWrap {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctIconWrap svg {
+  width: 17px;
+  height: 17px;
+}
+
+.ctIcon {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.ctLabel {
+  font-size: 11px;
+  color: var(--muted);
+  display: block;
+}
+
+.ctVal {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}

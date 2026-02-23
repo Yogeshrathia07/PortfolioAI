@@ -1,0 +1,136 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid rgba(26,111,232,0.10);
+  box-shadow: 0 1px 12px rgba(26,111,232,0.07);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+}
+
+.navLinks a {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--mid);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 100px;
+  transition: all 0.18s;
+  cursor: pointer;
+}
+
+.navLinks a:hover {
+  color: var(--accent);
+  background: rgba(26,111,232,0.07);
+}
+
+.navLinks a.active {
+  color: var(--accent);
+  font-weight: 600;
+  background: rgba(26,111,232,0.10);
+}
+
+.aiBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.18s, transform 0.18s;
+  box-shadow: 0 3px 12px rgba(26,111,232,0.30);
+}
+
+.aiBtn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.aiOrb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #a5c8ff, #c4e8ff, #a8d4ff, #a5c8ff);
+  animation: spin 4s linear infinite;
+  display: block;
+}
+
+@keyframes spin {
+  to { filter: hue-rotate(360deg); }
+}
+
+.mobMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  color: var(--text);
+  transition: background 0.18s;
+}
+
+.mobMenuBtn:hover {
+  background: rgba(26,111,232,0.07);
+}
+
+.mobMenuBtn svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.mobDrawer {
+  position: fixed;
+  top: 62px; left: 0; right: 0; bottom: 0;
+  background: rgba(13,27,62,0.4);
+  z-index: 200;
+  backdrop-filter: blur(2px);
+}
+
+.mobDrawerInner {
+  background: #fff;
+  padding: 8px 0 16px;
+  border-bottom: 1px solid rgba(26,111,232,0.10);
+  box-shadow: 0 8px 24px rgba(26,111,232,0.12);
+}
+
+.mobDrawerInner a {
+  display: block;
+  padding: 13px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--mid);
+  text-decoration: none;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.mobDrawerInner a:hover,
+.mobDrawerInner a.mobActive {
+  color: var(--accent);
+  background: rgba(26,111,232,0.06);
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 0 18px; }
+  .navLinks { display: none; }
+  .mobMenuBtn { display: block; }
+}
