@@ -12,6 +12,7 @@
   box-shadow: 0 1px 12px rgba(26,111,232,0.07);
 }
 
+/* Desktop nav links */
 .navLinks {
   display: flex;
   align-items: center;
@@ -41,6 +42,7 @@
   background: rgba(26,111,232,0.10);
 }
 
+/* Ask AI — visible on both desktop and mobile top bar */
 .aiBtn {
   display: flex;
   align-items: center;
@@ -56,6 +58,7 @@
   cursor: pointer;
   transition: opacity 0.18s, transform 0.18s;
   box-shadow: 0 3px 12px rgba(26,111,232,0.30);
+  white-space: nowrap;
 }
 
 .aiBtn:hover {
@@ -64,18 +67,20 @@
 }
 
 .aiOrb {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background: conic-gradient(from 0deg, #a5c8ff, #c4e8ff, #a8d4ff, #a5c8ff);
   animation: spin 4s linear infinite;
   display: block;
+  flex-shrink: 0;
 }
 
 @keyframes spin {
   to { filter: hue-rotate(360deg); }
 }
 
+/* ── Hamburger — mobile only ── */
 .mobMenuBtn {
   display: none;
   background: none;
@@ -97,12 +102,19 @@
   display: block;
 }
 
+/* ── Drawer — nav links only ── */
 .mobDrawer {
   position: fixed;
-  top: 62px; left: 0; right: 0; bottom: 0;
+  top: 56px; left: 0; right: 0; bottom: 0;
   background: rgba(13,27,62,0.4);
   z-index: 200;
   backdrop-filter: blur(2px);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .mobDrawerInner {
@@ -110,6 +122,12 @@
   padding: 8px 0 16px;
   border-bottom: 1px solid rgba(26,111,232,0.10);
   box-shadow: 0 8px 24px rgba(26,111,232,0.12);
+  animation: slideDown 0.22s cubic-bezier(0.16,1,0.3,1);
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .mobDrawerInner a {
@@ -129,8 +147,18 @@
   background: rgba(26,111,232,0.06);
 }
 
+/* ── Responsive ── */
 @media (max-width: 768px) {
-  .nav { padding: 0 18px; }
+  .nav {
+    padding: 0 16px;
+    height: 56px;
+  }
+
+  /* Hide desktop links */
   .navLinks { display: none; }
+
+  /* Show hamburger on left */
   .mobMenuBtn { display: block; }
+
+  /* Ask AI stays visible on the right — no change needed */
 }
